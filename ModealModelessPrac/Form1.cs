@@ -22,6 +22,7 @@ namespace ModealModelessPrac
         public Form1()
         {
             InitializeComponent();
+            IsMdiContainer = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -42,6 +43,7 @@ namespace ModealModelessPrac
         private void button2_Click(object sender, EventArgs e)
         {
             CustomForm form = new CustomForm();
+            form.MdiParent = this;
             form.Show();
         }
     }
