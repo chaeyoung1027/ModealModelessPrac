@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ModalModelessPrac32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,7 +23,7 @@ namespace ModealModelessPrac
         public Form1()
         {
             InitializeComponent();
-            IsMdiContainer = true;
+            //IsMdiContainer = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -43,8 +44,13 @@ namespace ModealModelessPrac
         private void button2_Click(object sender, EventArgs e)
         {
             CustomForm form = new CustomForm();
-            form.MdiParent = this;
+            //form.MdiParent = this;
             form.Show();
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form2 form = new Form2();
+            form.ShowDialog();
         }
     }
 }
